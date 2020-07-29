@@ -10,4 +10,4 @@ start = dt.datetime(2000,1,1)
 end = dt.datetime.now()
 
 df = web.DataReader('RLOG3.SA','yahoo', start, end)
-print(df.tail())
+df.to_csv('RLOG.csv')
