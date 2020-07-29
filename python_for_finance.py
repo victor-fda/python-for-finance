@@ -5,3 +5,9 @@ import pandas as pd
 import pandas_datareader.data as web
 
 style.use('ggplot')
+
+start = dt.datetime(2000,1,1)
+end = dt.datetime.now()
+
+df = web.DataReader('RLOG3.SA','yahoo', start, end)
+print(df.tail())
